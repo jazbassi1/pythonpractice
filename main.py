@@ -1,16 +1,19 @@
-def reverseWordOrder():
-    userInput = input("Please enter string of words \n")
-    #print(userInput) - printing user input
-    wordList = userInput.split(' ')
-    # print(wordList) ' ' - prints the string as a list
+def happiness(inputArr, posSet, negSet):  #inputs set for array
+    happiness = 0
+    for value in inputArr:  # loop over inputArray
+        if value in posSet:  # if in positive set increase happiness
+            happiness += 1
+        if value in negSet:  # if in negative set decrease happiness
+            happiness -= 1
 
-    count = len(wordList)
-    count = count - 1 # initially starts count at 3
-
-    while count >= 0:
-
-        print(wordList[count], end=' ') #end parameter with ' ' blank space to not give new lines for each iteration
-        count = count - 1
+    return happiness
 
 
-reverseWordOrder()
+# read inputs
+
+n, m = str(input()).split(' ')
+inputArr = list(str(input()).split(' '))  # list of array
+posSet = set((input()).split(' '))
+negSet = set((input()).split(' '))
+
+print(happiness(inputArr, posSet, negSet))
