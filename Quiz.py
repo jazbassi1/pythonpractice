@@ -34,13 +34,14 @@ if ans.lower() == 'yes':
     else:
         print("Incorrect")
 
-    ans = int(input('5. How many days are there is February ? '))
+#     ans = int(input('5. How many days are there is February ? '))
+
     if ans == 28:
         score += 1
         print("Correct")
     else:
         print("Incorrect")
-        ans = int(input('5. How many days are there is February ? '))
+        ans = int(input('5. How many days are there in February ? '))
 
     ans = input('6. What color do you create when you mix green and red ? ')
     if ans.lower() == 'brown':
@@ -77,9 +78,10 @@ if ans.lower() == 'yes':
     else:
         print("Incorrect")
 
-    print("Thanks for playing ! You got ", score, " questions correct. ")
+    print(f"Thanks for playing ! You got {score} questions correct. ")
     mark = (score/total_questions) * 100
 
     print("Score: ",mark, '%')
 else:
     print('Ok Goodbye :)')
+    
